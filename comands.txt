@@ -1,0 +1,49 @@
+### **Steps to Run Your Chatbot Again**
+
+1. **Open VS Code** and navigate to your project folder:
+
+```powershell
+cd C:\Users\jagan\Desktop\medicalchat
+```
+
+2. **Activate your virtual environment**:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+> If you see `(venv)` at the start of the line, it’s active.
+
+3. **Run your chatbot script** (for testing in Python REPL):
+
+```powershell
+python
+```
+
+Then in Python:
+
+```python
+from chatbot import medical_chatbot
+
+query = "What are the symptoms of diabetes?"
+answer = medical_chatbot(query)
+print("💡 Answer:", answer)
+```
+
+4. **Or run your Streamlit interface** (for web-based interaction):
+
+```powershell
+streamlit run app.py
+```
+
+* A browser window will open with your chatbot interface.
+* Enter any medical question to get answers.
+
+---
+
+### **Notes for Future Use**
+
+* Your **FAISS index is already saved**, so you don’t need to reprocess the PDF.
+* If you add new PDFs, you’ll need to **run `ingest.py` again** to update the index.
+* Always **activate your virtual environment** before running any scripts, so all libraries work correctly.
+
